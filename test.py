@@ -9,22 +9,21 @@ while t==2:
     alaligne()
 
     num=randint(1,20)
-
-
     print("Tu as droit à 3 essaies entre 1 et 20")
-    saisie=input("Saisie : ")
+    saisie=input("Essaie : ")
 
     def test():
-        global saisie
+      global saisie
+      test=saisie.isnumeric()
+      while test==False: 
+        print("Erreur de saisie")
+        saisie=input("non,c'est pas cà : ")
         test=saisie.isnumeric()
-        while test==False: 
-            print("Erreur de saisie")
-            saisie=input("Entrer un nombre : ")
-            test=saisie.isnumeric()
         saisie=int(saisie)
         return saisie
 
     
+
     test()
     note=3
     i=1
@@ -32,27 +31,28 @@ while t==2:
         if saisie<num:
             print("C'est plus")
             note=note-1
-            saisie=input("Entrer un nombre : ")
+            saisie=input("non,c'est pas cà toi aussi : ")
             test()
         elif saisie>num:
             print("C'est moins")
             note=note-1
-            saisie=input("Entrer un nombre : ")
+            saisie=input("non,c'est pas cà toi aussi : ")
             test()
-        else :
-            print(f"Win vous avez {note} points")
-            alaligne()
-            print("-------LE JEU EST FINI-------")
-            alaligne()
-            break
+       else :
+        print(f"Victoire vous avez {note} points")
+        alaligne()
+        print("-------LE JEU EST FINI-------")
+        alaligne()
+        break
 
-        i+=1
+    i=i+1
+
     
 
     
 if note==1:
     p=note-1
-    print(f"Echec vous avez {p} points")
+    print(f"T'es un looser, t'as eu {p} point minable ")
     alaligne()
     print("-------LE JEU EST FINI-------")
     alaligne()
