@@ -8,52 +8,52 @@ a()
 print("-------LE JUSTE PRIX-------")
 alaligne()
 
-num=randint(1,100)
+num=randint(1,80)
 
 
-print("Tu as droit à 5 essaies entre 1 et 100")
-saisie=input("Entre un nombre : ")
+print("Tu as droit à 4 essaies entre 1 et 80")
+saisie=input("Essaie : ")
 
 def test():
     global saisie
     test=saisie.isnumeric()
     while test==False: 
         print("Erreur de saisie")
-        saisie=input("Entrer un nombre : ")
+        saisie=input("non,c'est pas cà : ")
         test=saisie.isnumeric()
     saisie=int(saisie)
     return saisie
 
     
 test()
-note=5
+note=4
 i=1
-while i<5:
+while i<4:
     
     if saisie<num:
         print("C'est plus")
         note=note-1
-        saisie=input("Entrer un nombre : ")
+        saisie=input("non,c'est pas cà : ")
         test()
     elif saisie>num:
         print("C'est moins")
         note=note-1
-        saisie=input("Entrer un nombre : ")
+        saisie=input("non,c'est pas cà : ")
         test()
     else :
-        print(f"Win vous avez {note} points")
+        print(f"Victoire vous avez {note} points")
         alaligne()
         print("-------LE JEU EST FINI-------")
         alaligne()
         break
 
-    i+=1
+    i=i+1
     
 
     
 if note==1:
     p=note-1
-    print(f"Echec vous avez {p} points")
+    print(f"T'es un looser, t'as eu {p} point minable ")
     alaligne()
     print("-------LE JEU EST FINI-------")
     alaligne()
