@@ -1,7 +1,12 @@
+def alaligne():
+    print()
+
+
+
 from random import randint
-print()
+a()
 print("-------LE JUSTE PRIX-------")
-print()
+alaligne()
 
 num=randint(1,100)
 
@@ -37,9 +42,9 @@ while i<5:
         test()
     else :
         print(f"Win vous avez {note} points")
-        print()
+        alaligne()
         print("-------LE JEU EST FINI-------")
-        print()
+        alaligne()
         break
 
     i+=1
@@ -49,6 +54,6 @@ while i<5:
 if note==1:
     p=note-1
     print(f"Echec vous avez {p} points")
-    print()
+    alaligne()
     print("-------LE JEU EST FINI-------")
-    print()
+    alaligne()
