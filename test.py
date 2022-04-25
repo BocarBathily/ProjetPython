@@ -1,53 +1,52 @@
-def alaligne():
-    print()
+t=2
+while t==2:
+    def alaligne():
+        print()
+
+    from random import randint
+    alaligne()
+    print("-------LE JUSTE PRIX-------")
+    alaligne()
+
+    num=randint(1,20)
 
 
+    print("Tu as droit à 3 essaies entre 1 et 20")
+    saisie=input("Saisie : ")
 
-from random import randint
-a()
-print("-------LE JUSTE PRIX-------")
-alaligne()
-
-num=randint(1,100)
-
-
-print("Tu as droit à 5 essaies entre 1 et 100")
-saisie=input("Entre un nombre : ")
-
-def test():
-    global saisie
-    test=saisie.isnumeric()
-    while test==False: 
-        print("Erreur de saisie")
-        saisie=input("Entrer un nombre : ")
+    def test():
+        global saisie
         test=saisie.isnumeric()
-    saisie=int(saisie)
-    return saisie
+        while test==False: 
+            print("Erreur de saisie")
+            saisie=input("Entrer un nombre : ")
+            test=saisie.isnumeric()
+        saisie=int(saisie)
+        return saisie
 
     
-test()
-note=5
-i=1
-while i<5:
-    
-    if saisie<num:
-        print("C'est plus")
-        note=note-1
-        saisie=input("Entrer un nombre : ")
-        test()
-    elif saisie>num:
-        print("C'est moins")
-        note=note-1
-        saisie=input("Entrer un nombre : ")
-        test()
-    else :
-        print(f"Win vous avez {note} points")
-        alaligne()
-        print("-------LE JEU EST FINI-------")
-        alaligne()
-        break
+    test()
+    note=3
+    i=1
+    while i<3:
+        if saisie<num:
+            print("C'est plus")
+            note=note-1
+            saisie=input("Entrer un nombre : ")
+            test()
+        elif saisie>num:
+            print("C'est moins")
+            note=note-1
+            saisie=input("Entrer un nombre : ")
+            test()
+        else :
+            print(f"Win vous avez {note} points")
+            alaligne()
+            print("-------LE JEU EST FINI-------")
+            alaligne()
+            break
 
-    i+=1
+        i+=1
     
 
     
@@ -57,3 +56,5 @@ if note==1:
     alaligne()
     print("-------LE JEU EST FINI-------")
     alaligne()
+
+#modifier par le stagiaire pour apprendre a gérer les conflit
